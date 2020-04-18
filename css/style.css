@@ -1,5 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   font-family: "Lato", sans-serif;
+  background-color: #111920;
+  color: white;
+}
+
+.header-image {
+  max-width: 100%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.menu-link {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+.menu-link:visited {
+  color: white;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.top-tracks {
+  padding: 20px;
+}
+
+.tracks-title {
+  margin-bottom: 15px;
+}
+
+.tracks-list {
+  list-style-type: none;
+}
+
+.track {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #c67ec9;
+  margin-bottom: 10px;
+}
+
+.album-cover-small {
+  width: 40px;
+  height: 40px;
+}
+
+.play-track {
+  background: url("../images/icons8-play-64.png");
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+
+.play-track:hover {
+  cursor: pointer;
+}
+
+.tracks-info {
+  align-self: center;
 }
 
 /*# sourceMappingURL=style.css.map */
