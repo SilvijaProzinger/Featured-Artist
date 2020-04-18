@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<title>🎵 Featured Artist 🎵</title>
+</head>
+<body>
+	<div class="header">
+		<img class="header-image" alt="Zara Larsson" src="./images/zara.jpg"/>
+		<h1 class="headline">Z A R A   L A R S S O N</h1>
+	</div>
+	<div class="menu">
+		<a class="menu-link active" href="#biography"><h3>BIOGRAPHY</h3></a>
+		<a class="menu-link" href="#discography"><h3>DISCOGRAPHY</h3></a>
+		<a class="menu-link" href="#events"><h3>EVENTS</h3></a>
+		<a class="menu-link" href="#similar"><h3>SIMILAR ARTISTS</h3></a>
+	</div>
+
+	<div class="main-content">
+		<h4 class="bio-text">
+			Zara Maria Larsson (born December 16, 1997 in Stockholm, Sweden) is a Swedish singer. As a child Zara took part in a theatrical version of Sound of Music at the Göta Lejon Theatre in Stockholm, playing the part of Marta. Later Zara was a finalist of the Swedish talent show Stjärnskott 2007 but she received her national fame for winning the TV4 talent show Talang 2008, the Swedish version of Got Talent. During Talang 2008 she performed three songs: "The Greatest Love of All" and "One Moment in Time" by Whitney Houston, at the audition and the semifinal respectively; and "My Heart Will Go On" by Celine Dión at the final. She won the competition at age 10, and received the prize money of 500,000 SEK as a result. Zara's cover of My Heart Will Go On was released as her debut single.
+            <br><br>
+			Zara had a breakthrough with her debut EP Introducing, released in January 2013, with the single Uncover topping the charts in Sweden, Norway, and Denmark. Both the single as well as the album Introducing were certified triple platinum in July 2013 by Universal Music Sweden. Zara signed a three-year contract with Epic Records in the United States in April 2013.
+		</h4>
+	</div>
+	<div class="top-tracks">
+		<h3 class="tracks-title">TOP TRACKS</h3>
+		<ul class="tracks-list">
+			<li class="track"><img class="album-cover-small" src="" alt="So Good album cover"/><h4 class="tracks-info">Lush Life</h4><h4 class="tracks-info">So Good</h4><h4 class="tracks-info">2015</h4><button class="play-track">+</button>
+			</li>
+			<li class="track"><img class="album-cover-small" src="" alt="Ruin My Life single cover"/><h4 class="tracks-info">Ruin My Life</h4><h4 class="tracks-info">Single</h4><h4 class="tracks-info">2019</h4><button class="play-track">+</button></li>
+			<li class="track"><img class="album-cover-small" src="" alt="All the Time single cover"/> <h4 class="tracks-info">All the Time</h4><h4 class="tracks-info">Single</h4><h4 class="tracks-info">2019</h4><button class="play-track">+</button></li>
+		</ul>
+	</div>
+
+	<div class="music-player">
+		<audio src="./music/bensound-energy.mp3" id="song"></audio> <!-- Due to copyright rules I couldn't use the original Lush Life song so for the purposes of this demo I used royalty free song Energy from Bensound on Bensound.com -->
+        <input class="progress-bar"
+  			type="range"
+  			id="progress-bar"
+  			min="0"
+  			max=""
+  			value="0"
+  			onchange="changeProgressBar()"
+		/>
+		<h4 class="playing-now">Lush Life</h4>
+		<h4 class="playing-now">Zara Larsson</h4>
+		<button class="prev"><<</button>
+		<button class="play">></button>
+		<button class="next">>></button>
+		<button class="volume">I></button>
+	</div>
+	<script type='text/javascript' src="script.js"></script>
+</body>
+</html>
