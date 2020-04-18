@@ -1,3 +1,4 @@
+/* all icons belong to icons8 */
 * {
   padding: 0;
   margin: 0;
@@ -76,6 +77,64 @@ body {
 
 .tracks-info {
   align-self: center;
+}
+
+.music-player {
+  padding: 10px 20px 10px 20px;
+  position: sticky;
+  bottom: 0;
+  max-width: 100%;
+  background-color: #111920;
+}
+
+.progress-bar {
+  width: 100%;
+}
+
+.player {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.prev {
+  background: url("../images/icons8-rewind-64.png");
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+
+.play {
+  background: url("../images/icons8-play-64.png");
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+
+.next {
+  background: url("../images/icons8-fast-forward-64.png");
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+
+.volume {
+  background: url("../images/icons8-speaker-64.png");
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  width: 40px;
+  height: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */
