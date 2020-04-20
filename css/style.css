@@ -21,7 +21,7 @@ body {
   padding: 30px;
 }
 
-.menu-link {
+.link {
   cursor: pointer;
   color: white;
   text-decoration: none;
@@ -29,11 +29,11 @@ body {
   padding-bottom: 7px;
 }
 
-.menu-link:visited {
+.link:visited {
   color: white;
 }
 
-.menu-link::after {
+.link::after {
   content: "";
   width: 0%;
   height: 7px;
@@ -47,7 +47,7 @@ body {
   transition: all 500ms ease;
 }
 
-.menu-link:hover::after {
+.link:hover::after {
   left: 0%;
   width: 100%;
 }
@@ -58,6 +58,7 @@ body {
 
 .bio-text {
   font-weight: 300;
+  text-align: justify;
 }
 
 .top-tracks {
@@ -177,6 +178,84 @@ body {
 
 .prev, .play, .next, .volume:hover {
   cursor: pointer;
+}
+
+.playing-now {
+  font-weight: 300;
+}
+
+.discography {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.album {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+}
+
+.album-cover {
+  width: 100px;
+  height: 100px;
+}
+
+.album-cover:hover {
+  width: 130px;
+  height: 130px;
+}
+
+.album-info {
+  padding: 10px;
+  align-self: center;
+}
+
+.album-type {
+  font-weight: 300;
+}
+
+.events {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.event {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+}
+
+.event-icon:hover {
+  width: 96px;
+  height: 96px;
+}
+
+.event-info {
+  padding: 10px;
+  align-self: center;
+}
+
+.event-details {
+  font-weight: 300;
+}
+
+.nonmenu-link {
+  cursor: pointer;
+}
+
+.years-active {
+  font-weight: 300;
+  align-self: center;
+}
+
+.artist {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
