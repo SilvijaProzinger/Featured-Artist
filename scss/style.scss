@@ -1,5 +1,16 @@
 /* all icons belong to icons8 */
 
+$padding: 30px;
+
+$colors: (
+	bg: #111920,
+	gradientOne: #9a249e,
+	gradientTwo: #c67ec9
+);
+
+@function color($color-name){
+	@return map-get($colors, $color-name);
+}
 
 * {
 	padding: 0;
@@ -8,7 +19,7 @@
 
 body {
 	font-family: 'Lato', sans-serif;
-	background-color: #111920;
+	background-color: color(bg);
 	color: white;
 }
 
@@ -20,25 +31,49 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	padding: 20px;
+	padding: $padding;
 }
 
 .menu-link {
 	cursor: pointer;
 	color: white;
 	text-decoration: none;
+	position: relative;
+	padding-bottom: 7px;
 }
 
 .menu-link:visited {
 	color: white;
 }
 
+.menu-link::after {
+	content: '';
+	width: 0%;
+	height: 7px;
+	background: color(gradientOne); /*fallback for old browsers */
+	background: -webkit-linear-gradient(to right, color(gradientOne), color(gradientTwo));
+	background: linear-gradient(to right, color(gradientOne), color(gradientTwo));
+	position: absolute;
+	bottom: 0%;
+	left: 50%;
+	transition: all 500ms ease;
+}
+
+.menu-link:hover::after {
+	left: 0%;
+	width: 100%;
+}
+
 .main-content {
-	padding: 20px;
+	padding: $padding;
+}
+
+.bio-text {
+	font-weight: 300;
 }
 
 .top-tracks {
-	padding: 20px;
+	padding: $padding;
 }
 
 .tracks-title {
@@ -54,8 +89,19 @@ body {
 	flex-direction: row;
 	justify-content: space-between;
 	padding: 10px;
-	background-color: #c67ec9;
 	margin-bottom: 10px;
+	border: 1px solid color(gradientTwo);
+	background-color: color(bg);
+	background-size: 0% 100%;
+	transition: background-color .5s;
+}
+
+.track:hover {
+	background-color: color(gradientOne);
+	background-image:linear-gradient(to right, rgba(154, 36, 158) 0%, rgba(198, 126, 201) 40%, rgba(255,255,255,.7) 100%);
+	background-repeat:no-repeat;
+	background-size: 200% 100%; 
+	transition:background-size 2s, background-color 2s;
 }
 
 .album-cover-small {
@@ -75,6 +121,8 @@ body {
 
 .play-track:hover {
 	cursor: pointer;
+	width: 40px;
+	height: 40px;
 }
 
 .tracks-info {
@@ -82,11 +130,11 @@ body {
 }
 
 .music-player {
-	padding: 10px 20px 10px 20px;
+	padding: 30px 30px 20px 30px;
 	position: sticky;
 	bottom: 0;
 	max-width: 100%;
-	background-color: #111920;
+	background-color: color(bg);
 }
 
 .progress-bar {
@@ -139,3 +187,6 @@ body {
 	height: 40px;
 }
 
+.prev, .play, .next, .volume:hover {
+	cursor: pointer;
+}
