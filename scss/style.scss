@@ -208,14 +208,22 @@ body {
 	flex-direction: row;
 	padding: $padding;
 }
+
 .album-cover {
+	overflow: hidden; 
+}
+
+.album-cover img {
 	width: 100px;
 	height: 100px;
 }
 
-.album-cover:hover {
-	width: 130px;
-	height: 130px;
+.album-cover img {
+  	transition: transform .5s ease;
+}
+
+.album-cover:hover img {
+  	transform: scale(1.5);
 }
 
 .album-info {
@@ -240,9 +248,15 @@ body {
 	padding: $padding;
 }
 
-.event-icon:hover {
-	width: 96px;
-	height: 96px;
+.event-icon {
+	overflow: hidden; 
+}
+.event-icon img {
+  	transition: transform .5s ease;
+}
+
+.event-icon:hover img {
+  	transform: scale(1.5);
 }
 
 .event-info {
@@ -260,11 +274,42 @@ body {
 
 .years-active {
 	font-weight: 300;
-	align-self: center;
+}
+
+.artists {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .artist {
 	display: flex;
 	flex-direction: row;
+	padding: $padding;
+}
+
+.artist-image img {
+	width: 150px;
+	height: 150px;
+}
+
+.artist-image {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+  	overflow: hidden; 
+}
+
+.artist-image img {
+  	transition: transform .5s ease;
+}
+
+.artist-image:hover img {
+  	transform: scale(1.5);
+}
+
+.artist-info {
+	align-self: center;
 	padding: $padding;
 }
