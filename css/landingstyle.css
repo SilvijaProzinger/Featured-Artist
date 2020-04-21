@@ -6,21 +6,16 @@
 body {
   font-family: "Lato", sans-serif;
   color: white;
-}
-
-body::after {
-  content: "";
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg") no-repeat center center fixed;
+  background: url("../images/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
+}
+
+body:after {
+  display: none;
+  content: url("../images/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg") url("../images/bg.gif");
 }
 
 .title {
