@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: white;
+}
+
+body::after {
+  content: "";
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.title {
+  text-align: center;
+  padding-bottom: 20px;
+  letter-spacing: 5px;
+}
+
+.subtitle {
+  font-weight: 300;
+}
+
+.landing-page {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  text-align: justify;
+}
+
+.find-more {
+  position: absolute;
+  text-align: center;
+  border: none;
+  padding: 15px;
+  background-color: #c67ec9;
+  margin-top: 40px;
+  background-size: 0% 100%;
+  transition: background-color 0.5s;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.find-more:hover {
+  cursor: pointer;
+  background-color: #9a249e;
+  background-image: linear-gradient(to right, #9a249e 0%, #c67ec9 40%, rgba(255, 255, 255, 0.7) 100%);
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+  transition: background-size 2s, background-color 2s;
+}
+
+.find-more a {
+  text-decoration: none;
+  color: white;
+}
+
+.find-more a:visited {
+  color: white;
+}
+
+/*# sourceMappingURL=landingstyle.css.map */
