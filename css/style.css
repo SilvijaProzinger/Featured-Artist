@@ -303,4 +303,41 @@ body {
   padding: 30px;
 }
 
+.mobile-menu {
+  display: none;
+}
+
+.menu-icon {
+  width: 40px;
+  height: 40px;
+  padding-top: 30px;
+}
+
+@media only screen and (max-width: 560px) {
+  .mobile-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu-icon:hover {
+    width: 48px;
+    height: 48px;
+  }
+
+  .link::after {
+    content: "";
+    width: 0%;
+    height: 0;
+  }
+
+  .artists {
+    justify-content: center;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
