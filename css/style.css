@@ -339,5 +339,14 @@ body {
     justify-content: center;
   }
 }
+@media only screen and (max-width: 710px) {
+  .discography {
+    justify-content: center;
+  }
+
+  .album {
+    display: inline-block;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

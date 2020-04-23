@@ -9,6 +9,7 @@ $colors: (
 );
 
 $small-screen: 560px;
+$medium-screen: 710px;
 
 @function color($color-name){
 	@return map-get($colors, $color-name);
@@ -350,5 +351,15 @@ body {
 
 	.artists {
 		justify-content: center;
+	}
+}
+
+@media only screen and (max-width: $medium-screen){
+	.discography {
+		justify-content: center;
+	}
+	
+	.album {
+		display: inline-block;
 	}
 }
