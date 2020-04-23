@@ -10,6 +10,7 @@ $colors: (
 
 $small-screen: 560px;
 $medium-screen: 710px;
+$large-screen: 1500px;
 
 @function color($color-name){
 	@return map-get($colors, $color-name);
@@ -358,8 +359,14 @@ body {
 	.discography {
 		justify-content: center;
 	}
-	
+
 	.album {
 		display: inline-block;
+	}
+}
+
+@media only screen and (min-width: $large-screen){
+	body {
+		font-size: 1.3rem;
 	}
 }
