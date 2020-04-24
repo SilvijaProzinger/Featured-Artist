@@ -78,8 +78,18 @@
 				<button class="pause" id="pauseButton" onclick="playOrPause()"></button>
 				<button class="next" id="playPause" onclick="nextSong()"></button>
 			</div>
-			<button class="volume"></button> <!-- to do this -->
+			<button class="volume" id="volumeButton"></button> <!-- to do this -->
 		</div>
+	</div>
+	<div class="volume-bar-div" id="volumeBar">
+		<input class="volume-bar" 
+			type="range"
+			id="volumeSlider"
+			min="0"
+			max="100"
+			value="100"
+			step="1"
+		/>
 	</div>
 	<script type='text/javascript' src="script.js"></script>
 </body>
