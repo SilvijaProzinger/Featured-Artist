@@ -361,6 +361,19 @@ body {
 		height: 0;
 	}
 
+	.event {
+		padding: 30px 5px 30px 30px;
+	}
+
+    .event-info {
+    	font-size: 0.8rem ;
+    }
+
+    .event-icon img {
+    	width: 70px;
+    	height: 70px;
+    }
+
 	.artists {
 		justify-content: center;
 	}
