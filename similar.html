@@ -58,10 +58,10 @@
 		</ul>
 	</div>
 	<div class="music-player">
-		<audio src="music/bensound-energy.mp3" id="song"></audio> <!-- Due to copyright rules I couldn't use the original Lush Life song so for the purposes of this demo I used royalty free song Energy from Bensound on Bensound.com -->
+		<audio src="music/bensound-energy.mp3" id="audio"></audio> <!-- Due to copyright rules I couldn't use the original Lush Life song so for the purposes of this demo I used royalty free song Energy from Bensound on Bensound.com -->
         <input class="progress-bar"
   			type="range"
-  			id="progress-bar"
+  			id="progressBar"
   			min="0"
   			max=""
   			value="0"
@@ -69,15 +69,16 @@
 		/>
 		<div class="player">
 			<div class="currently-playing">
-				<h4>Lush Life</h4>
-				<h4 class="playing-now">Zara Larsson</h4>
+				<h4 id="songTitle"></h4>
+				<h4 class="playing-now" id="artistName"></h4>
 			</div>
 			<div class="player-controls">
-				<button class="prev"></button>
-				<button class="play"></button>
-				<button class="next"></button>
+				<button class="prev" id="prev" onclick="previousSong()"></button>
+				<button class="play" id="playButton" onclick="playOrPause()"></button>
+				<button class="pause" id="pauseButton" onclick="playOrPause()"></button>
+				<button class="next" id="playPause" onclick="nextSong()"></button>
 			</div>
-			<button class="volume"></button>
+			<button class="volume"></button> <!-- to do this -->
 		</div>
 	</div>
 	<script type='text/javascript' src="script.js"></script>

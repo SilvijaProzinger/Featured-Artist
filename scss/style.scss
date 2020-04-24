@@ -1,5 +1,9 @@
 /* all icons belong to icons8 */
 
+/* import the styling for music player */
+
+@import "musicplayer";
+
 $padding: 30px;
 
 $colors: (
@@ -142,10 +146,6 @@ body {
 	background-color: color(bg);
 }
 
-.progress-bar {
-	width: 100%;
-}
-
 .player {
 	display: flex;
 	flex-direction: row;
@@ -164,6 +164,17 @@ body {
 
 .play {
 	background: url('../images/icons8-play-64.png');
+	background-position: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: none;
+	width: 40px;
+	height: 40px;
+}
+
+.pause {
+	display: none;
+	background: url('../images/icons8-pause-64.png');
 	background-position: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
