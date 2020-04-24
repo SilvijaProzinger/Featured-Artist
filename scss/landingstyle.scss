@@ -1,7 +1,11 @@
+$small-screen: 560px;
+
 $colors: (
 	gradientOne: #9a249e,
 	gradientTwo: #c67ec9
 );
+
+$height: 100vh;
 
 @function color($color-name){
 	@return map-get($colors, $color-name);
@@ -77,3 +81,8 @@ body:after{
 	color: white;
 }
 
+@media only screen and (max-width: $small-screen){
+	.landing-page {
+		top: 30%
+	}
+}
