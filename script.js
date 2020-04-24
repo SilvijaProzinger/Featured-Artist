@@ -10,6 +10,7 @@ let songs = ['music/bensound-energy.mp3', 'music/bensound-hey.mp3', 'music/benso
 songTitles = ["Lush Life", "Ruin My Life", "All the Time"];
 
 let playTrack = document.getElementsByClassName('play-track')
+let volumeSlider = document.getElementById('volumeSlider')
 
 const playOrPause = () => {
   console.log(songIndex)
@@ -87,3 +88,21 @@ for (let i = 0; i < playTrack.length; i++){
 		playOrPause()
 	})
 }
+
+// show volume bar when hovering over volume button and the bar itself */
+document.getElementById('volumeButton').addEventListener('mouseover', function(){
+	document.querySelector('.volume-bar-div').style.display = 'inline-block'
+})
+
+document.getElementById('volumeBar').addEventListener('mouseover', function(){
+	document.querySelector('.volume-bar-div').style.display = 'inline-block'
+})
+
+document.getElementById('volumeBar').addEventListener('mouseout', function(){
+	document.querySelector('.volume-bar-div').style.display = 'none'
+})
+
+// upon moving the volume slider increase or decrease volume
+volumeSlider.addEventListener('mousemove', function(){
+	song.volume = volumeSlider.value/100
+})

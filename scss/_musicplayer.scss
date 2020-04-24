@@ -104,3 +104,24 @@ input[type=range]::-ms-fill-upper {
 input[type=range]:focus::-ms-fill-upper {
   background: #c67ec9;
 }
+
+/* style the volume bar */
+
+.volume-bar[type=range]{
+  width: 100px;
+  transform: rotate(90deg) scaleX(-1); //rotate the volume bar so that it's vertical and scaleX so that it's not inverted when increasing or decreasing volume
+  right: 0;
+  position: fixed;
+  bottom: 110px;
+}
+
+.volume-bar-div {
+  display: none;
+  width: 30px;
+  height: 120px;
+  padding: 5px;
+  background-color: #111920;
+  position: fixed;
+  right: 35px;
+  bottom: 65px;
+}
