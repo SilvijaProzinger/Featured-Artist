@@ -143,7 +143,7 @@ body {
 
 @media only screen and (min-width: 710px) {
   .main-wrapper {
-    margin: 0 40px;
+    margin: 0 20px;
   }
 }
 
@@ -157,11 +157,6 @@ body {
   justify-content: space-between;
   padding: 40px;
 }
-@media only screen and (min-width: 710px) {
-  .menu {
-    margin: 0 40px;
-  }
-}
 
 .link {
   cursor: pointer;
@@ -169,10 +164,6 @@ body {
   text-decoration: none;
   position: relative;
   padding-bottom: 7px;
-}
-
-.link h3 {
-  margin-bottom: 15px;
 }
 
 .link:visited {

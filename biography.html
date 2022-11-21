@@ -24,57 +24,58 @@
 		<a class="link" href="events.html"><img class="menu-icon" src="./images/icons8-event-64.png" alt="events"/></a>
 		<a class="link" href="similar.html"><img class="menu-icon" src="./images/icons8-connected-people-64.png" alt="similar artists"/></a>
 	</div>
-
-	<div class="main-content" id="biography">
-		<h4 class="bio-text">
-			Zara Maria Larsson (born December 16, 1997 in Stockholm, Sweden) is a Swedish singer. As a child Zara took part in a theatrical version of Sound of Music at the Göta Lejon Theatre in Stockholm, playing the part of Marta. Later Zara was a finalist of the Swedish talent show Stjärnskott 2007 but she received her national fame for winning the TV4 talent show Talang 2008, the Swedish version of Got Talent. During Talang 2008 she performed three songs: "The Greatest Love of All" and "One Moment in Time" by Whitney Houston, at the audition and the semifinal respectively; and "My Heart Will Go On" by Celine Dión at the final. She won the competition at age 10, and received the prize money of 500,000 SEK as a result. Zara's cover of My Heart Will Go On was released as her debut single.
-            <br><br>
-			Zara had a breakthrough with her debut EP Introducing, released in January 2013, with the single Uncover topping the charts in Sweden, Norway, and Denmark. Both the single as well as the album Introducing were certified triple platinum in July 2013 by Universal Music Sweden. Zara signed a three-year contract with Epic Records in the United States in April 2013.
-		</h4>
-	</div>
-	<div class="top-tracks">
-		<h3 class="tracks-title">TOP TRACKS</h3>
-		<ul class="tracks-list">
-			<li class="track"><img class="album-cover-small" src="images/sogood.png" alt="So Good album cover"/><h4 class="tracks-info">Lush Life</h4><h4 class="tracks-info">So Good</h4><h4 class="tracks-info">2015</h4><button class="play-track"></button>
-			</li>
-			<li class="track"><img class="album-cover-small" src="images/ruinmylife.png" alt="Ruin My Life single cover"/><h4 class="tracks-info">Ruin My Life</h4><h4 class="tracks-info">Single</h4><h4 class="tracks-info">2019</h4><button class="play-track"></button></li>
-			<li class="track"><img class="album-cover-small" src="images/allthetime.png" alt="All the Time single cover"/> <h4 class="tracks-info">All the Time</h4><h4 class="tracks-info">Single</h4><h4 class="tracks-info">2019</h4><button class="play-track"></button></li>
-		</ul>
-	</div>
-	<div class="music-player">
-		<audio src="music/bensound-energy.mp3" id="audio"></audio> <!-- Due to copyright rules I couldn't use the original Lush Life song so for the purposes of this demo I used royalty free songs Energy, Hey and Perception from Bensound on Bensound.com -->
-        <input class="progress-bar"
-  			type="range"
-  			id="progressBar"
-  			min="0"
-  			max=""
-  			value="0"
-  			onchange="changeProgressBar()"
-		/>
-		<div class="player">
-			<div class="currently-playing">
-				<h4 id="songTitle"></h4>
-				<h4 class="playing-now" id="artistName"></h4>
+    <div class="main-wrapper">
+		<div class="main-content" id="biography">
+			<h4 class="bio-text">
+				Zara Maria Larsson (born December 16, 1997 in Stockholm, Sweden) is a Swedish singer. As a child Zara took part in a theatrical version of Sound of Music at the Göta Lejon Theatre in Stockholm, playing the part of Marta. Later Zara was a finalist of the Swedish talent show Stjärnskott 2007 but she received her national fame for winning the TV4 talent show Talang 2008, the Swedish version of Got Talent. During Talang 2008 she performed three songs: "The Greatest Love of All" and "One Moment in Time" by Whitney Houston, at the audition and the semifinal respectively; and "My Heart Will Go On" by Celine Dión at the final. She won the competition at age 10, and received the prize money of 500,000 SEK as a result. Zara's cover of My Heart Will Go On was released as her debut single.
+				<br><br>
+				Zara had a breakthrough with her debut EP Introducing, released in January 2013, with the single Uncover topping the charts in Sweden, Norway, and Denmark. Both the single as well as the album Introducing were certified triple platinum in July 2013 by Universal Music Sweden. Zara signed a three-year contract with Epic Records in the United States in April 2013.
+			</h4>
+		</div>
+		<div class="top-tracks">
+			<h3 class="tracks-title">TOP TRACKS</h3>
+			<ul class="tracks-list">
+				<li class="track"><img class="album-cover-small" src="images/sogood.png" alt="So Good album cover"/><h4 class="tracks-info">Lush Life</h4><h4 class="tracks-info">So Good</h4><h4 class="tracks-info">2015</h4><button class="play-track"></button>
+				</li>
+				<li class="track"><img class="album-cover-small" src="images/ruinmylife.png" alt="Ruin My Life single cover"/><h4 class="tracks-info">Ruin My Life</h4><h4 class="tracks-info">Single</h4><h4 class="tracks-info">2019</h4><button class="play-track"></button></li>
+				<li class="track"><img class="album-cover-small" src="images/allthetime.png" alt="All the Time single cover"/> <h4 class="tracks-info">All the Time</h4><h4 class="tracks-info">Single</h4><h4 class="tracks-info">2019</h4><button class="play-track"></button></li>
+			</ul>
+		</div>
+		<div class="music-player">
+			<audio src="music/bensound-energy.mp3" id="audio"></audio> <!-- Due to copyright rules I couldn't use the original Lush Life song so for the purposes of this demo I used royalty free songs Energy, Hey and Perception from Bensound on Bensound.com -->
+			<input class="progress-bar"
+				type="range"
+				id="progressBar"
+				min="0"
+				max=""
+				value="0"
+				onchange="changeProgressBar()"
+			/>
+			<div class="player">
+				<div class="currently-playing">
+					<h4 id="songTitle"></h4>
+					<h4 class="playing-now" id="artistName"></h4>
+				</div>
+				<div class="player-controls">
+					<button class="prev" id="prev" onclick="musicPlayer.previousSong()"></button>
+					<button class="play" id="playButton" onclick="musicPlayer.playOrPause()"></button>
+					<button class="pause" id="pauseButton" onclick="musicPlayer.playOrPause()"></button>
+					<button class="next" id="playPause" onclick="musicPlayer.nextSong()"></button>
+				</div>
+				<button class="volume" id="volumeButton"></button> 
 			</div>
-			<div class="player-controls">
-				<button class="prev" id="prev" onclick="musicPlayer.previousSong()"></button>
-				<button class="play" id="playButton" onclick="musicPlayer.playOrPause()"></button>
-				<button class="pause" id="pauseButton" onclick="musicPlayer.playOrPause()"></button>
-				<button class="next" id="playPause" onclick="musicPlayer.nextSong()"></button>
-			</div>
-			<button class="volume" id="volumeButton"></button> 
+		</div>	
+		<div class="volume-bar-div" id="volumeBar">
+			<input class="volume-bar" 
+				type="range"
+				id="volumeSlider"
+				min="0"
+				max="100"
+				value="100"
+				step="1"
+			/>
 		</div>
 	</div>	
-	<div class="volume-bar-div" id="volumeBar">
-		<input class="volume-bar" 
-			type="range"
-			id="volumeSlider"
-			min="0"
-			max="100"
-			value="100"
-			step="1"
-		/>
-	</div>
 	<script type='text/javascript' src="script.js"></script>
 </body>
 </html>

@@ -53,10 +53,6 @@ body.hovered {
   transition: background-color 0.5s;
   display: block;
   margin: 0 auto;
-  text-decoration: none;
-  color: white;
-  font-size: 1.1rem;
-  width: 150px;
 }
 
 .find-more:hover {
@@ -68,7 +64,13 @@ body.hovered {
   transition: background-size 2s, background-color 2s;
 }
 
-.find-more:visited {
+.find-more a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.find-more a:visited {
   color: white;
 }
 
