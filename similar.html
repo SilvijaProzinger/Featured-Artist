@@ -1,97 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-	<title>🎵 Featured Artist 🎵</title>
-</head>
-<body>
-	<div class="header">
-		<img class="header-image" alt="Zara Larsson" src="./images/header.jpg" loading="lazy"/> <!--image credit to Justin Higuchi on Flickr -->
-	</div>
-	<div class="menu">
-		<a class="link" href="biography.html"><h3>BIOGRAPHY</h3></a>
-		<a class="link" href="discography.html"><h3>DISCOGRAPHY</h3></a>
-		<a class="link" href="events.html"><h3>EVENTS</h3></a>
-		<a class="link" href="similar.html"><h3>SIMILAR ARTISTS</h3></a>
-	</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <title>🎵 Featured Artist 🎵</title>
+  </head>
+  <body>
+    <div class="header">
+      <img
+        class="header-image"
+        alt="Zara Larsson"
+        src="./images/header.jpg"
+        loading="lazy"
+      />
+      <!--image credit to Justin Higuchi on Flickr -->
+    </div>
+    <div class="menu">
+      <a class="link" href="biography.html"><h3>BIOGRAPHY</h3></a>
+      <a class="link" href="discography.html"><h3>DISCOGRAPHY</h3></a>
+      <a class="link" href="events.html"><h3>EVENTS</h3></a>
+      <a class="link" href="similar.html"><h3>SIMILAR ARTISTS</h3></a>
+    </div>
 
-	<div class="mobile-menu">
-		<a class="link" href="biography.html"><img class="menu-icon" src="./images/icons8-book-96.png" alt="biography"/></a>
-		<a class="link" href="discography.html"><img class="menu-icon" src="./images/icons8-cd-30.png" alt="discography"/></a>
-		<a class="link" href="events.html"><img class="menu-icon" src="./images/icons8-event-64.png" alt="events"/></a>
-		<a class="link" href="similar.html"><img class="menu-icon" src="./images/icons8-connected-people-64.png" alt="similar artists"/></a>
-	</div>
-	<div class="main-wrapper">
-		<div class="artists" id="similar">
-			<div class="artist">
-				<div class="artist-image"><a class="nonmenu-link" href="https://en.wikipedia.org/wiki/Dua_Lipa"><img alt="Dua Lipa" src="images/dua lipa.jpg"/></a></div>
-				<div class="artist-info">
-					<h4>Dua Lipa</h4>
-					<h4 class="years-active">2015 - Today</h4>
-				</div>			
-			</div>
-			<div class="artist">
-				<div class="artist-image"><a class="nonmenu-link" href="https://en.wikipedia.org/wiki/Charli_XCX"><img alt="Charli XCX" src="images/charli xcx.jpg"/></a></div>
-				<div class="artist-info">
-					<h4>Charli XCX</h4>
-					<h4 class="years-active">2013 - Today</h4>
-				</div>			
-			</div>
-			<div class="artist">
-				<div class="artist-image"><a class="nonmenu-link" href="https://en.wikipedia.org/wiki/Tove_Lo"><img alt="Tove Lo" src="images/tove lo.jpg"/></a></div>
-				<div class="artist-info">
-					<h4>Tove Lo</h4>
-					<h4 class="years-active">2012 - Today</h4>
-				</div>			
-			</div>
-		</div>
-		<div class="top-tracks">
-			<h3 class="tracks-title">TOP TRACKS</h3>
-			<ul class="tracks-list">
-				<li class="track"><img class="album-cover-small" src="images/sogood.png" alt="So Good album cover"/><h4 class="tracks-info">Lush Life</h4><h4 class="tracks-info">So Good</h4><h4 class="tracks-info">2015</h4><button class="play-track"></button>
-				</li>
-				<li class="track"><img class="album-cover-small" src="images/ruinmylife.png" alt="Ruin My Life single cover"/><h4 class="tracks-info">Ruin My Life</h4><h4 class="tracks-info">Single</h4><h4 class="tracks-info">2019</h4><button class="play-track"></button></li>
-				<li class="track"><img class="album-cover-small" src="images/allthetime.png" alt="All the Time single cover"/> <h4 class="tracks-info">All the Time</h4><h4 class="tracks-info">Single</h4><h4 class="tracks-info">2019</h4><button class="play-track"></button></li>
-			</ul>
-		</div>
-		<div class="music-player">
-			<audio src="music/bensound-energy.mp3" id="audio"></audio> <!-- Due to copyright rules I couldn't use the original Lush Life song so for the purposes of this demo I used royalty free song Energy from Bensound on Bensound.com -->
-			<input class="progress-bar"
-				  type="range"
-				  id="progressBar"
-				  min="0"
-				  max=""
-				  value="0"
-				  onchange="changeProgressBar()"
-			/>
-			<div class="player">
-				<div class="currently-playing">
-					<h4 id="songTitle"></h4>
-					<h4 class="playing-now" id="artistName"></h4>
-				</div>
-				<div class="player-controls">
-					<button class="prev" id="prev" onclick="musicPlayer.previousSong()"></button>
-					<button class="play" id="playButton" onclick="musicPlayer.playOrPause()"></button>
-					<button class="pause" id="pauseButton" onclick="musicPlayer.playOrPause()"></button>
-					<button class="next" id="playPause" onclick="musicPlayer.nextSong()"></button>
-				</div>
-				<button class="volume" id="volumeButton"></button> <!-- to do this -->
-			</div>
-		</div>
-		<div class="volume-bar-div" id="volumeBar">
-			<input class="volume-bar" 
-				type="range"
-				id="volumeSlider"
-				min="0"
-				max="100"
-				value="100"
-				step="1"
-			/>
-		</div>
-	</div>
-	<script type='text/javascript' src="script.js"></script>
-</body>
+    <div class="mobile-menu">
+      <a class="link" href="biography.html"
+        ><img
+          class="menu-icon"
+          src="./images/icons8-book-96.png"
+          alt="biography"
+      /></a>
+      <a class="link" href="discography.html"
+        ><img
+          class="menu-icon"
+          src="./images/icons8-cd-30.png"
+          alt="discography"
+      /></a>
+      <a class="link" href="events.html"
+        ><img class="menu-icon" src="./images/icons8-event-64.png" alt="events"
+      /></a>
+      <a class="link" href="similar.html"
+        ><img
+          class="menu-icon"
+          src="./images/icons8-connected-people-64.png"
+          alt="similar artists"
+      /></a>
+    </div>
+    <div class="main-wrapper">
+      <div class="artists" id="similar">
+        <div class="artist">
+          <div class="artist-image">
+            <a
+              class="nonmenu-link"
+              href="https://en.wikipedia.org/wiki/Dua_Lipa"
+              ><img alt="Dua Lipa" src="images/dua lipa.jpg"
+            /></a>
+          </div>
+          <div class="artist-info">
+            <h4>Dua Lipa</h4>
+            <h4 class="years-active">2015 - Today</h4>
+          </div>
+        </div>
+        <div class="artist">
+          <div class="artist-image">
+            <a
+              class="nonmenu-link"
+              href="https://en.wikipedia.org/wiki/Charli_XCX"
+              ><img alt="Charli XCX" src="images/charli xcx.jpg"
+            /></a>
+          </div>
+          <div class="artist-info">
+            <h4>Charli XCX</h4>
+            <h4 class="years-active">2013 - Today</h4>
+          </div>
+        </div>
+        <div class="artist">
+          <div class="artist-image">
+            <a class="nonmenu-link" href="https://en.wikipedia.org/wiki/Tove_Lo"
+              ><img alt="Tove Lo" src="images/tove lo.jpg"
+            /></a>
+          </div>
+          <div class="artist-info">
+            <h4>Tove Lo</h4>
+            <h4 class="years-active">2012 - Today</h4>
+          </div>
+        </div>
+      </div>
+      <div class="top-tracks">
+        <h3 class="tracks-title">TOP TRACKS</h3>
+        <ul class="tracks-list">
+          <li class="track">
+            <img
+              class="album-cover-small"
+              src="images/sogood.png"
+              alt="So Good album cover"
+            />
+            <h4 class="tracks-info">Lush Life</h4>
+            <h4 class="tracks-info">So Good</h4>
+            <h4 class="tracks-info">2015</h4>
+            <button class="play-track"></button>
+          </li>
+          <li class="track">
+            <img
+              class="album-cover-small"
+              src="images/ruinmylife.png"
+              alt="Ruin My Life single cover"
+            />
+            <h4 class="tracks-info">Ruin My Life</h4>
+            <h4 class="tracks-info">Single</h4>
+            <h4 class="tracks-info">2019</h4>
+            <button class="play-track"></button>
+          </li>
+          <li class="track">
+            <img
+              class="album-cover-small"
+              src="images/allthetime.png"
+              alt="All the Time single cover"
+            />
+            <h4 class="tracks-info">All the Time</h4>
+            <h4 class="tracks-info">Single</h4>
+            <h4 class="tracks-info">2019</h4>
+            <button class="play-track"></button>
+          </li>
+        </ul>
+      </div>
+      <div class="music-player">
+        <audio src="music/bensound-energy.mp3" id="audio"></audio>
+        <!-- Due to copyright rules I couldn't use the original Lush Life song so for the purposes of this demo I used royalty free song Energy from Bensound on Bensound.com -->
+        <input
+          class="progress-bar"
+          type="range"
+          id="progressBar"
+          min="0"
+          max=""
+          value="0"
+          onchange="changeProgressBar()"
+        />
+        <div class="player">
+          <div class="currently-playing">
+            <h4 id="songTitle"></h4>
+            <h4 class="playing-now" id="artistName"></h4>
+          </div>
+          <div class="player-controls">
+            <button
+              class="prev"
+              id="prev"
+              onclick="musicPlayer.previousSong()"
+            ></button>
+            <button
+              class="play"
+              id="playButton"
+              onclick="musicPlayer.playOrPause()"
+            ></button>
+            <button
+              class="pause"
+              id="pauseButton"
+              onclick="musicPlayer.playOrPause()"
+            ></button>
+            <button
+              class="next"
+              id="playPause"
+              onclick="musicPlayer.nextSong()"
+            ></button>
+          </div>
+          <button class="volume" id="volumeButton"></button>
+          <!-- to do this -->
+        </div>
+      </div>
+      <div class="volume-bar-div" id="volumeBar">
+        <input
+          class="volume-bar"
+          type="range"
+          id="volumeSlider"
+          min="0"
+          max="100"
+          value="100"
+          step="1"
+        />
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>

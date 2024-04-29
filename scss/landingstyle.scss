@@ -1,92 +1,98 @@
 $small-screen: 560px;
 
 $colors: (
-	gradientOne: #9a249e,
-	gradientTwo: #c67ec9
+  gradientOne: #9a249e,
+  gradientTwo: #c67ec9,
 );
 
 $height: 100vh;
 
-@function color($color-name){
-	@return map-get($colors, $color-name);
+@function color($color-name) {
+  @return map-get($colors, $color-name);
 }
 
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	font-family: 'Lato', sans-serif;
-	color: white;
-	background: url('../images/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  font-family: "Lato", sans-serif;
+  color: white;
+  background: url("../images/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg") no-repeat
+    center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 body.hovered {
-	background: url("../images/bg.gif") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-  }
+  background: url("../images/bg.gif") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 .title {
-	text-align: center;
-	padding-bottom: 20px;
-	letter-spacing: 5px;
-	font-size: 2.5rem;
+  text-align: center;
+  padding-bottom: 20px;
+  letter-spacing: 5px;
+  font-size: 2.5rem;
 }
 
 .subtitle {
-	font-weight: 300;
-	font-size: 1.25rem;
-    margin: 1rem 0;
+  font-weight: 300;
+  font-size: 1.25rem;
+  margin: 1rem 0;
 }
 
 .landing-page {
-	margin: 0;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: justify;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: justify;
 }
 
 .find-more {
-	text-align: center;
-	border: none;
-	padding: 15px;
-	background-color: #c67ec9;
-	margin-top: 40px;
-	background-size: 0% 100%;
-	transition: background-color 0.5s;
-	display: block;
-	margin: 0 auto;
-	text-decoration: none;
-	color: white;
-	font-size: 1.1rem;
-	width: 150px;
+  text-align: center;
+  border: none;
+  padding: 15px;
+  background-color: #c67ec9;
+  margin-top: 40px;
+  background-size: 0% 100%;
+  transition: background-color 0.5s;
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  width: 150px;
 }
 
 .find-more:hover {
-	cursor: pointer;
-	background-color: color(gradientOne);
-	background-image:linear-gradient(to right, rgba(154, 36, 158) 0%, rgba(198, 126, 201) 40%, rgba(255,255,255,.7) 100%);
-	background-repeat:no-repeat;
-	background-size: 200% 100%; 
-	transition:background-size 2s, background-color 2s;
+  cursor: pointer;
+  background-color: color(gradientOne);
+  background-image: linear-gradient(
+    to right,
+    rgba(154, 36, 158) 0%,
+    rgba(198, 126, 201) 40%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+  transition: background-size 2s, background-color 2s;
 }
 
 .find-more:visited {
-	color: white;
+  color: white;
 }
 
-@media only screen and (max-width: $small-screen){
-	.landing-page {
-		top: 30%
-	}
+@media only screen and (max-width: $small-screen) {
+  .landing-page {
+    top: 30%;
+  }
 }

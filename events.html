@@ -1,92 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-	<title>🎵 Featured Artist 🎵</title>
-</head>
-<body>
-	<div class="header">
-		<img class="header-image" alt="Zara Larsson" src="./images/header.jpg" loading="lazy"/> <!--image credit to Justin Higuchi on Flickr -->
-	</div>
-	<div class="menu">
-		<a class="link" href="biography.html"><h3>BIOGRAPHY</h3></a>
-		<a class="link" href="discography.html"><h3>DISCOGRAPHY</h3></a>
-		<a class="link" href="events.html"><h3>EVENTS</h3></a>
-		<a class="link" href="similar.html"><h3>SIMILAR ARTISTS</h3></a>
-	</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <title>🎵 Featured Artist 🎵</title>
+  </head>
+  <body>
+    <div class="header">
+      <img
+        class="header-image"
+        alt="Zara Larsson"
+        src="./images/header.jpg"
+        loading="lazy"
+      />
+      <!--image credit to Justin Higuchi on Flickr -->
+    </div>
+    <div class="menu">
+      <a class="link" href="biography.html"><h3>BIOGRAPHY</h3></a>
+      <a class="link" href="discography.html"><h3>DISCOGRAPHY</h3></a>
+      <a class="link" href="events.html"><h3>EVENTS</h3></a>
+      <a class="link" href="similar.html"><h3>SIMILAR ARTISTS</h3></a>
+    </div>
 
-	<div class="mobile-menu">
-		<a class="link" href="biography.html"><img class="menu-icon" src="./images/icons8-book-96.png" alt="biography"/></a>
-		<a class="link" href="discography.html"><img class="menu-icon" src="./images/icons8-cd-30.png" alt="discography"/></a>
-		<a class="link" href="events.html"><img class="menu-icon" src="./images/icons8-event-64.png" alt="events"/></a>
-		<a class="link" href="similar.html"><img class="menu-icon" src="./images/icons8-connected-people-64.png" alt="similar artists"/></a>
-	</div>
-	<div class="main-wrapper">
-		<div class="events" id="events">
-			<div class="event">
-				<div class="event-icon"><a class="nonmenu-link" href="https://www.brannbollsyran.com/"><img src="images/icons8-may-96.png" alt="may event" width="80px" height="80px"/></a></div>
-				<div class="event-info">
-					<h4>Brännbollsyran</h4>
-					<h4 class="event-details">Thursday 28 May 2020 — Saturday 30 May 2020</h4>
-					<h4 class="event-details">Umeå, Sweden</h4>
-				</div>
-			</div>
-			<div class="event">
-				<div class="event-icon"><a class="nonmenu-link" href="https://www.megaland-landgraaf.nl/"><img src="images/icons8-june-96.png" alt="june event" width="80px" height="80px"/></a></div>
-				<div class="event-info">
-					<h4>PinkPop 2020</h4>
-					<h4 class="event-details">Friday 19 June 2020 — Sunday 21 June 2020</h4>
-					<h4 class="event-details">Hofstraat 15, Landgraaf, 6372 XC, Netherlands</h4>
-				</div>
-			</div>
-		</div>
-		<div class="top-tracks">
-			<h3 class="tracks-title">TOP TRACKS</h3>
-			<ul class="tracks-list">
-				<li class="track"><img class="album-cover-small" src="images/sogood.png" alt="So Good album cover"/><h4 class="tracks-info">Lush Life</h4><h4 class="tracks-info">So Good</h4><h4 class="tracks-info">2015</h4><button class="play-track"></button>
-				</li>
-				<li class="track"><img class="album-cover-small" src="images/ruinmylife.png" alt="Ruin My Life single cover"/><h4 class="tracks-info">Ruin My Life</h4><h4 class="tracks-info">Single</h4><h4 class="tracks-info">2019</h4><button class="play-track"></button></li>
-				<li class="track"><img class="album-cover-small" src="images/allthetime.png" alt="All the Time single cover"/> <h4 class="tracks-info">All the Time</h4><h4 class="tracks-info">Single</h4><h4 class="tracks-info">2019</h4><button class="play-track"></button></li>
-			</ul>
-		</div>
-		<div class="music-player">
-			<audio src="music/bensound-energy.mp3" id="audio"></audio> <!-- Due to copyright rules I couldn't use the original Lush Life song so for the purposes of this demo I used royalty free song Energy from Bensound on Bensound.com -->
-			<input class="progress-bar"
-				  type="range"
-				  id="progressBar"
-				  min="0"
-				  max=""
-				  value="0"
-				  onchange="changeProgressBar()"
-			/>
-			<div class="player">
-				<div class="currently-playing">
-					<h4 id="songTitle"></h4>
-					<h4 class="playing-now" id="artistName"></h4>
-				</div>
-				<div class="player-controls">
-					<button class="prev" id="prev" onclick="musicPlayer.previousSong()"></button>
-					<button class="play" id="playButton" onclick="musicPlayer.playOrPause()"></button>
-					<button class="pause" id="pauseButton" onclick="musicPlayer.playOrPause()"></button>
-					<button class="next" id="playPause" onclick="musicPlayer.nextSong()"></button>
-				</div>
-				<button class="volume" id="volumeButton"></button> <!-- to do this -->
-			</div>
-		</div>
-		<div class="volume-bar-div" id="volumeBar">
-			<input class="volume-bar" 
-				type="range"
-				id="volumeSlider"
-				min="0"
-				max="100"
-				value="100"
-				step="1"
-			/>
-		</div>
-	</div>
-	<script type='text/javascript' src="script.js"></script>
-</body>
+    <div class="mobile-menu">
+      <a class="link" href="biography.html"
+        ><img
+          class="menu-icon"
+          src="./images/icons8-book-96.png"
+          alt="biography"
+      /></a>
+      <a class="link" href="discography.html"
+        ><img
+          class="menu-icon"
+          src="./images/icons8-cd-30.png"
+          alt="discography"
+      /></a>
+      <a class="link" href="events.html"
+        ><img class="menu-icon" src="./images/icons8-event-64.png" alt="events"
+      /></a>
+      <a class="link" href="similar.html"
+        ><img
+          class="menu-icon"
+          src="./images/icons8-connected-people-64.png"
+          alt="similar artists"
+      /></a>
+    </div>
+    <div class="main-wrapper">
+      <div class="events" id="events">
+        <div class="event">
+          <div class="event-icon">
+            <a class="nonmenu-link" href="https://www.brannbollsyran.com/"
+              ><img
+                src="images/icons8-may-96.png"
+                alt="may event"
+                width="80px"
+                height="80px"
+            /></a>
+          </div>
+          <div class="event-info">
+            <h4>Brännbollsyran</h4>
+            <h4 class="event-details">
+              Thursday 28 May 2020 — Saturday 30 May 2020
+            </h4>
+            <h4 class="event-details">Umeå, Sweden</h4>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-icon">
+            <a class="nonmenu-link" href="https://www.megaland-landgraaf.nl/"
+              ><img
+                src="images/icons8-june-96.png"
+                alt="june event"
+                width="80px"
+                height="80px"
+            /></a>
+          </div>
+          <div class="event-info">
+            <h4>PinkPop 2020</h4>
+            <h4 class="event-details">
+              Friday 19 June 2020 — Sunday 21 June 2020
+            </h4>
+            <h4 class="event-details">
+              Hofstraat 15, Landgraaf, 6372 XC, Netherlands
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="top-tracks">
+        <h3 class="tracks-title">TOP TRACKS</h3>
+        <ul class="tracks-list">
+          <li class="track">
+            <img
+              class="album-cover-small"
+              src="images/sogood.png"
+              alt="So Good album cover"
+            />
+            <h4 class="tracks-info">Lush Life</h4>
+            <h4 class="tracks-info">So Good</h4>
+            <h4 class="tracks-info">2015</h4>
+            <button class="play-track"></button>
+          </li>
+          <li class="track">
+            <img
+              class="album-cover-small"
+              src="images/ruinmylife.png"
+              alt="Ruin My Life single cover"
+            />
+            <h4 class="tracks-info">Ruin My Life</h4>
+            <h4 class="tracks-info">Single</h4>
+            <h4 class="tracks-info">2019</h4>
+            <button class="play-track"></button>
+          </li>
+          <li class="track">
+            <img
+              class="album-cover-small"
+              src="images/allthetime.png"
+              alt="All the Time single cover"
+            />
+            <h4 class="tracks-info">All the Time</h4>
+            <h4 class="tracks-info">Single</h4>
+            <h4 class="tracks-info">2019</h4>
+            <button class="play-track"></button>
+          </li>
+        </ul>
+      </div>
+      <div class="music-player">
+        <audio src="music/bensound-energy.mp3" id="audio"></audio>
+        <!-- Due to copyright rules I couldn't use the original Lush Life song so for the purposes of this demo I used royalty free song Energy from Bensound on Bensound.com -->
+        <input
+          class="progress-bar"
+          type="range"
+          id="progressBar"
+          min="0"
+          max=""
+          value="0"
+          onchange="changeProgressBar()"
+        />
+        <div class="player">
+          <div class="currently-playing">
+            <h4 id="songTitle"></h4>
+            <h4 class="playing-now" id="artistName"></h4>
+          </div>
+          <div class="player-controls">
+            <button
+              class="prev"
+              id="prev"
+              onclick="musicPlayer.previousSong()"
+            ></button>
+            <button
+              class="play"
+              id="playButton"
+              onclick="musicPlayer.playOrPause()"
+            ></button>
+            <button
+              class="pause"
+              id="pauseButton"
+              onclick="musicPlayer.playOrPause()"
+            ></button>
+            <button
+              class="next"
+              id="playPause"
+              onclick="musicPlayer.nextSong()"
+            ></button>
+          </div>
+          <button class="volume" id="volumeButton"></button>
+          <!-- to do this -->
+        </div>
+      </div>
+      <div class="volume-bar-div" id="volumeBar">
+        <input
+          class="volume-bar"
+          type="range"
+          id="volumeSlider"
+          min="0"
+          max="100"
+          value="100"
+          step="1"
+        />
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>

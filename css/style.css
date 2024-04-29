@@ -143,7 +143,8 @@ body {
 
 @media only screen and (min-width: 710px) {
   .main-wrapper {
-    margin: 0 40px;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 }
 
@@ -159,7 +160,8 @@ body {
 }
 @media only screen and (min-width: 710px) {
   .menu {
-    margin: 0 40px;
+    margin: 0 auto;
+    max-width: 1320px;
   }
 }
 
@@ -203,7 +205,8 @@ body {
 }
 
 .bio-text {
-  font-weight: 300;
+  font-weight: normal;
+  letter-spacing: 0.5px;
 }
 
 .top-tracks {
@@ -328,7 +331,10 @@ body {
   height: 40px;
 }
 
-.prev, .play, .next, .volume:hover {
+.prev,
+.play,
+.next,
+.volume:hover {
   cursor: pointer;
 }
 
